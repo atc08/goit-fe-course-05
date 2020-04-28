@@ -4,7 +4,7 @@
 }
 
 body {
-  width: 1600px;
+  min-width: 1600px;
   margin: 0 auto;
   font-family: "Open Sans", "Arial", sans-serif;
   font-family: "Roboto", "Arial", sans-serif;
@@ -67,17 +67,25 @@ a {
 }
 /* SLIDER */
 .slid {
-  width: 1600px;
+  min-width: 1600px;
+  height: 600px;
   margin: 0 auto;
   position: relative;
-  padding-bottom: 101px;
+  margin-bottom: 101px;
+}
+
+.slider-img {
+  min-width: 100%;
+  height: 600px;
+  object-fit: cover;
 }
 
 .slider::before {
   content: "";
   background-color: rgba(0, 0, 2, 0.52);
-  width: 1600px;
-  height: 583px;
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
   position: absolute;
 }
 
@@ -113,6 +121,7 @@ a {
   position: absolute;
   top: 32%;
   left: 15%;
+  transform: translateX(10%);
 }
 
 .slider-arrow {
@@ -120,6 +129,7 @@ a {
   height: 104px;
   background-color: rgba(78, 198, 171, 0.65);
   padding-left: 40px;
+  cursor: pointer;
 }
 
 .slider-arrow:hover {
@@ -173,6 +183,10 @@ a {
   display: block;
 }
 
+.collection-item:hover .name-price {
+  background-color: rgb(26, 188, 156);
+}
+
 .name-price {
   float: left;
   position: absolute;
@@ -207,10 +221,6 @@ a {
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-}
-
-.name-price:hover {
-  background-color: rgb(26, 188, 156);
 }
 
 /* OVERLAY */
@@ -284,8 +294,8 @@ a {
 .overlay-button-trolley {
   width: 166px;
   height: 50px;
-  border: 1px solid #ffffff;
-  background-color: #323232;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(50, 50, 50);
 }
 
 .overlay-button-trolley::before {
@@ -316,6 +326,7 @@ a {
 .footer {
   height: 88px;
   background-color: rgb(50, 50, 50);
+  background-size: cover;
 }
 
 .rights {
